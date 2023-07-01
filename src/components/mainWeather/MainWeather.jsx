@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {Link} from 'wouter'
 import lupa from '../../assets/magnifying-glass-solid.svg'
+import extendedForecastjpg from '../../assets/extendedForecast.webp'
 import './mainWeather.css'
 import Header from '../header/Header'
 import Main from '../main/Main'
@@ -33,7 +34,7 @@ function MainWeather() {
   if(searcher) return (
     <>
       <button className="searcher-button" onClick={toggleSearch}><img src={lupa}/></button>
-      <button className="searcher-button to-forecast"><Link href='/extendedforecast'><a>Extended Forecast</a></Link></button>
+      <Link href='/extendedforecast'><button className="searcher-button to-forecast"><img className='ext-fore-img' src={extendedForecastjpg} alt="siguientes dias"/></button></Link>
       <div className="body-container">
         <form className='location-data searcher' onSubmit={handleSubmit}>
           <input type="text" placeholder='Buenos Aires, Paris or Pekin'/>
@@ -48,7 +49,7 @@ function MainWeather() {
   if(weather != "") return (
     <>
       <button className="searcher-button" onClick={toggleSearch}><img src={lupa}/></button>
-      <button className="searcher-button to-forecast"><Link href='/extendedforecast'><a>Extended Forecast</a></Link></button>
+      <Link href='/extendedforecast'><button className="searcher-button to-forecast"><img className='ext-fore-img' src={extendedForecastjpg} alt="siguientes dias"/></button></Link>
       <div className="body-container">
         <Header headerInfo = {weather.location}/>
         <Main weatherData={weather.current}/>

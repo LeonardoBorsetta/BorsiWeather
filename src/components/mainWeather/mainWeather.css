@@ -65,3 +65,24 @@ a{
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.ext-fore-img{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 0px;
+  width: 70px;
+}
+
+@media (max-width : 600px) {
+  .searcher-button{
+    width: 40px;
+    height: 40px;
+  }
+  .ext-fore-img{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0px;
+    width: 30px;
+  }
+}
