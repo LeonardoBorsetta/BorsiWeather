@@ -1,0 +1,25 @@
+.forecast-data{
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-block: 16px;
+}
+.tomorrow-data{
+  box-shadow: 0px 0px 10px white;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-between;
+  width: 150px;
+}
+.forecast-header{
+  font-size: 15px;
+}
+.forecast-desc{
+  font-size: 15px;
+}
+.forecast-img{
+  width: 75px;
+}
