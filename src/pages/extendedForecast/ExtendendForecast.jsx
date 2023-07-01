@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import {Link} from 'wouter'
 import Header from '../../components/header/Header'
 import WeatherContext from '../../context/weatherContext'
 import SingleDayForecast from '../../components/singleDayForecastMini/SingleDayForecastMini'
@@ -11,8 +12,8 @@ function ExtendendForecast() {
     <div className="body-container">
       <Header headerInfo = {weather.location}/>
       <div className="forecast-forecastExtended-container">
-        <SingleDayForecast forecastData={weather.forecast.forecastday[1]} day={"Mañana"}/>
-        <SingleDayForecast forecastData={weather.forecast.forecastday[2]} day={"Pasado Mañana"}/>
+        <Link href='/tomorrow'><a><SingleDayForecast forecastData={weather.forecast.forecastday[1]} day={"Mañana"}/></a></Link>
+        <Link href='2dayNext'><a><SingleDayForecast forecastData={weather.forecast.forecastday[2]} day={"Mañana"}/></a></Link>
       </div>
     </div>
   )

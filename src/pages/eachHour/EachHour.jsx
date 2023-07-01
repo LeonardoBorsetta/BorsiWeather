@@ -3,6 +3,7 @@ import WeatherContext from '../../context/weatherContext';
 import { Link } from 'wouter';
 import './eachHour.css'
 import Header from '../../components/header/Header';
+import home from '../../assets/home.svg'
 
 function EachHour() {
 
@@ -12,7 +13,7 @@ function EachHour() {
 
   return (
     <div className="body-container">
-      <Link href='/'><button className='searcher-button to-home'>Home</button></Link>
+      <Link href='/'><button className='searcher-button to-home'><img src={home} alt="to Home"/></button></Link>
       <Header headerInfo = {weather.location}/>
       <h2>Cada hora para el dia <br/>{date}</h2>
       {
