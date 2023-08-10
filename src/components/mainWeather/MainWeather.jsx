@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {Link} from 'wouter'
 import lupa from '../../assets/magnifying-glass-solid.svg'
+import clock from '../../assets/clock-solid.svg'
 import extendedForecastjpg from '../../assets/extendedForecast.webp'
 import './mainWeather.css'
 import Header from '../header/Header'
@@ -35,6 +36,7 @@ function MainWeather() {
     <>
       <button className="searcher-button" onClick={toggleSearch}><img src={lupa}/></button>
       <Link href='/extendedforecast'><button className="searcher-button to-forecast"><img className='ext-fore-img' src={extendedForecastjpg} alt="siguientes dias"/></button></Link>
+      <Link href='/each-hour-today'><button className='searcher-button each-hour'><img src={clock} alt="" className='arrow'/></button></Link>
       <div className="body-container">
         <form className='location-data searcher' onSubmit={handleSubmit}>
           <input type="text" placeholder='Buenos Aires, Paris or Pekin'/>
@@ -50,6 +52,7 @@ function MainWeather() {
     <>
       <button className="searcher-button" onClick={toggleSearch}><img src={lupa}/></button>
       <Link href='/extendedforecast'><button className="searcher-button to-forecast"><img className='ext-fore-img' src={extendedForecastjpg} alt="siguientes dias"/></button></Link>
+      <Link href='/each-hour-today'><button className='searcher-button each-hour'><img src={clock} alt="" className='arrow'/></button></Link>
       <div className="body-container">
         <Header headerInfo = {weather.location}/>
         <Main weatherData={weather.current}/>
